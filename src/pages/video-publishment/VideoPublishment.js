@@ -108,7 +108,7 @@ const VideoPublishment = (props) => {
         )
 
         return (
-            <Grid item xs={3} key={video.id}>
+            <Grid item xs={12} md={6} lg={4} xl={3} key={video.id}>
                 <Box style={{height: '100%'}}>
                     <VideoCard
                         creatorIcon={video.content_creator_profile_icon_url}

@@ -97,20 +97,20 @@ function VideoApproval() {
 
         let cardDetails = (
             <>
-                <Typography>Duration: {video.duration}s</Typography>
-                <Typography>Size: {getMbDisplay(video.size)}</Typography>
+                <Typography>Duration: {video.duration ? video.duration + 's' : "-"}</Typography>
+                <Typography>Size: {video.size ? getMbDisplay(video.size) : "-"}</Typography>
                 <Typography>Dimension: {video.height} x {video.width}</Typography>
             </>
         );
 
         return (
-            <Grid item xs={3} key={video.id}>
+            <Grid item xs={12} md={6} lg={4} xl={3} key={video.id}>
                 <Box style={{height: '100%'}}>
                     <VideoCard
                         creatorIcon={video.content_creator_profile_icon_url}
                         creatorName={video.content_creator_name}
                         createdDate={formattedDate}
-                        videoCoverImg={video.cover_image_url}
+                        videoCoverImg={video.cover_image_url ? video.cover_image_url : video.source_url}
                         videoSourceUrl={video.source_url}
                         mainTitle={video.title}
                         details={cardDetails}
