@@ -48,6 +48,7 @@ const VideoCard = ({
                     onClick={() => {
                         openNewTab(videoSourceUrl)
                     }}
+                    alt={creatorName}
                 />
                 <Box style={{marginBottom: 8}}>
                     {tagElements.map((tag) => (
