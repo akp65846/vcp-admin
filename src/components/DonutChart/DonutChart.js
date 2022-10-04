@@ -25,8 +25,8 @@ const DonutChart = ({label, series, title, ...props}) => {
         },
         series: [{
             data: series
-        }]
-        // labels: label
+        }],
+        labels: label
     }
 
 
